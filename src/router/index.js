@@ -1,24 +1,39 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import SignUp from "../views/SignUp.vue";
+import Login from "../views/Login.vue";
+import Pokemons from "../views/Pokemons.vue";
+import PokemonDetails from "../views/PokemonDetails.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "information",
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
-    },
+    path: "/signup",
+    name: "signup",
+    component: SignUp,
+  },
+  {
+    path: "/login",
+    name: "signin",
+    component: Login,
+  },
+  {
+    path: "/pokemons",
+    name: "pokemons",
+    component: Pokemons,
+  },
+  {
+    path: "/pokemon/detail",
+    name: "pokemonDetails",
+    component: PokemonDetails,
+    props: true,
   },
 ];
 
