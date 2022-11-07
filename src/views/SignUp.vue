@@ -44,7 +44,7 @@ export default {
         }
 
         this.msg = "Successfully created";
-        this.$router.push("signin");
+        this.$router.push("/login");
       } catch (error) {
         this.showError = true;
         this.msg = error;
